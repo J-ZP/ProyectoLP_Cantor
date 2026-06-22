@@ -1,0 +1,11 @@
+# max2.cantor
+main max2
+
+extended
+
+import cond
+import relacionals
+
+define max2
+    [Retorna l'element més gran de la parella]
+    compair cond gt id

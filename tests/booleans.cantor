@@ -1,0 +1,24 @@
+# booleans.cantor
+# no hi ha main, només definicions
+
+import signe
+
+define and
+    [Retorna 1 sí i només sí els 2 operands son > 0]
+    comp signe mul
+
+define or
+    [Retorna 1 sí i només sí 1 dels 2 operands es > 0]
+    comp signe add
+
+define aparella_amb_1
+    [Aparella l'entrada x amb 1: <1.x> ]
+    pair k_1 id
+
+define resta_1
+    [Resta l'entrada 1, amb límit 0]
+    comp diff aparella_amb_1
+
+define not
+    [Retorna 1 sí i només sí l'operand és 0]
+    comp signe resta_1

@@ -1,0 +1,31 @@
+# cond.cantor
+main cond
+
+extended
+
+import signe
+import booleans
+
+define a
+    [Donat input <p.<a.b>>, retorna a]
+    comp fst snd
+
+define b
+    [Donat input <p.<a.b>>, retorna b]
+    comp snd snd
+
+define notp
+    [Donat input <p.<a.b>>, retorna not p]
+    comp not fst
+
+define term_a
+    [Donat input <p.<a.b>>, retorna a*p]
+    compair mul a fst
+
+define term_b
+    [Donat input <p.<a.b>>, retorna b*(1-p)]
+    compair mul b notp
+
+define cond
+    [Donat input <p.<a.b>>, retorna a si p és cert, b en cas contrari]
+    compair add term_a term_b

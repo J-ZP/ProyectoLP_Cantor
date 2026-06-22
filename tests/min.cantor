@@ -1,0 +1,8 @@
+# min.cantor
+main min
+
+extended
+
+define min 
+    [Retorna l'element més petit de la parella]
+    compair diff fst diff 

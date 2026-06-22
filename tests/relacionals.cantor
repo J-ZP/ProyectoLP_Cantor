@@ -1,0 +1,33 @@
+# relacionals.cantor
+extended
+
+import signe
+import booleans
+
+define swap
+    [canvia <x.y> a <y.x>]
+    pair snd fst
+
+define diff_swap
+    [canvia l'ordre dels operands i els resta]
+    comp diff swap
+
+define sum_diffs
+    [Retorna la suma de x-y i y-x, que es 0 sí i només sí x = y, ja que treballem amb els naturals]
+    compair add diff diff_swap
+
+define lt
+    [Retorna 1 sí i només sí y - x > 0, 0 en cas contrari]
+    comp signe diff_swap
+
+define gt
+    [Retorna 1 sí i només sí x - y > 0, 0 en cas contrari]
+    comp signe diff
+
+define neq
+    [Retorna 1 sí i només sí x - y != 0, 0 en cas contrari]
+    comp signe sum_diffs
+
+define eq
+    [Retorna 1 sí i només sí x - y = 0, 0 en cas contrari]
+    comp not neq

@@ -1,0 +1,25 @@
+# mod_even.cantor
+
+extended
+
+import div
+
+define ydivxy
+    [Retorna y * div(x,y) amb <x.y> com a input]
+    compair mul snd div
+
+define mod
+    [Retorna x modulo y, basat en x mod y = x - y * (x div y), donat input <x.y>]
+    compair diff fst ydivxy
+
+define k_2
+    [Retorna 2]
+    compair add k_1 k_1
+
+define x_mod_2
+    [Retorna x mod 2]
+    compair mod id k_2
+
+define even
+    [Retorna 1 si i només si l'input és parell]
+    compair diff k_1 x_mod_2

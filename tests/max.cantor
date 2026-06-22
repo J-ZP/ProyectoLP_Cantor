@@ -1,0 +1,8 @@
+# max.cantor
+main max
+
+extended
+
+define max
+    [Retorna l'element més gran de la parella]
+    compair add snd diff 

@@ -1,0 +1,41 @@
+# fibonacci.cantor
+
+main fibonacci
+extended
+import relacionals
+
+define k_0
+    [0]
+    compair diff k_1 k_1
+
+define is_base0
+    [zero?]
+    compair eq id k_0
+
+define is_base1
+    [u?]
+    compair eq id k_1
+
+define is_base
+    [0 o 1?]
+    compair or is_base0 is_base1
+
+define segon
+    [2on element de l'historial]
+    comp fst snd
+
+define rest
+    [snd de l'historial]
+    comp snd snd
+
+define tercer
+    [3er element de l'historial]
+    comp fst rest
+
+define step
+    [recursiu fibonacci]
+    compair add segon tercer
+
+define fibonacci
+    [fib(x) = fib(x-1) + fib(x-2), on fib(0) = 0, fib(1) = 1]
+    primrec is_base id step
